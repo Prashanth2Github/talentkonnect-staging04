@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import './App.css';
 
 const App: React.FC = () => {
@@ -86,7 +86,8 @@ const App: React.FC = () => {
         <header className="app-header">
           <div className="header-content">
             <div className="logo">
-              <span className="logo-talent">talent</span><span className="logo-konnect">konnect</span>
+              <span className="logo-talent">talent</span>
+              <span className="logo-konnect">konnect</span>
             </div>
             <h1>Gamified Micro-Task Marketplace</h1>
           </div>
@@ -96,9 +97,9 @@ const App: React.FC = () => {
           <nav className="sidebar">
             <div className="nav-section">
               <h3>Modules</h3>
-              {modules.map((module, index) => (
+              {modules.map((module) => (
                 <button 
-                  key={index} 
+                  key={module.key} 
                   onClick={() => setActiveModule(module.key)}
                   className={`nav-link ${activeModule === module.key ? 'active' : ''}`}
                 >
@@ -118,9 +119,11 @@ const App: React.FC = () => {
             <div className="module-frame">
               {currentModule && (
                 <iframe
+                  key={currentModule.key}
                   src={currentModule.url}
                   title={currentModule.name}
                   className="module-iframe"
+                  loading="lazy"
                   sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
                 />
               )}

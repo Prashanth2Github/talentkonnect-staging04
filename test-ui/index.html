@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TalentKonnect — Assessment</title>
+
+  <!-- If you're using Tailwind built CSS include it here, otherwise the local style.css fallback -->
+  <!-- Example: <link href="/dist/assets/index-af2187ef.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- meta for Netlify / Vercel headers if needed -->
+  <meta name="theme-color" content="#0ea5a4">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <header class="site-header">
+      <h1>TalentKonnect — Demo</h1>
+    </header>
+
+    <main>
+      <section id="spotlight-section">
+        <h2>Spotlight</h2>
+        <button id="enter-spotlight">Enter Spotlight</button>
+        <div id="spotlight-result" role="status" aria-live="polite"></div>
+      </section>
+
+      <section id="credits-section">
+        <h2>Credits</h2>
+        <label>
+          User ID:
+          <input id="credits-userid" type="text" placeholder="userId">
+        </label>
+        <label>
+          Amount:
+          <input id="credits-amount" type="number" min="1" value="10">
+        </label>
+        <button id="allocate-credits">Allocate Credits</button>
+        <div id="credits-result" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>Built for assessment — static + serverless</small>
+    </footer>
+  </div>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>

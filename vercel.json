@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
   "installCommand": "npm install",
   "rewrites": [
     {
@@ -19,9 +18,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "SKIP_PREFLIGHT_CHECK": "true",
-    "DISABLE_ESLINT_PLUGIN": "true"
-  }
-} 
+  ]
+}
