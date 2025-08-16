@@ -42,6 +42,8 @@ app.post("/api/credits/allocate", (req, res) => {
   res.json({ success: true, message: `${credits} credits allocated to ${userId}` });
 });
 
-// Dynamic port for Vercel
+// Dynamic port for local dev
 const PORT = process.env.PORT || 8888;
 app.listen(PORT, () => console.log(`Backend running on http://localhost:${PORT}`));
+
+export default app; // for Vercel serverless

@@ -1,0 +1,39 @@
+.complete-form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.complete-form-container h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1D3557;
+  margin-bottom: 10px;
+}
+
+.complete-form textarea,
+.complete-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Lora', serif;
+}
+
+.complete-form button {
+  background-color: #1D3557;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.complete-form button:hover {
+  background-color: #163049;
+}

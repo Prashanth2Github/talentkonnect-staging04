@@ -1,0 +1,60 @@
+/* GigItem.css */
+
+.gig-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #e0e0e0;
+}
+
+.gig-card:hover {
+  transform: translateY(-2px);
+}
+
+.gig-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1D3557;
+  margin-bottom: 8px;
+}
+
+.gig-description {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #2A2D34;
+  margin-bottom: 6px;
+}
+
+.gig-bounty {
+  color: #E76F51;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.accept-button {
+  background-color: #E76F51;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.accept-button:hover {
+  background-color: #cf593e;
+}
+
+.in-progress {
+  color: #1D3557;
+  font-weight: 600;
+  margin-top: 12px;
+  font-family: 'Inter', sans-serif;
+}

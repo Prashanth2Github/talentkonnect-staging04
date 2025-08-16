@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentKonnect - Credit & Notification Modules</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@600&family=Lora:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="talent">talent</span><span class="konnect">konnect</span>
+            </div>
+            <nav class="nav">
+                <a href="#conversion" class="nav-item active">Credit Conversion</a>
+                <a href="#notifications" class="nav-item">Notifications</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Notification Banner -->
+        <div id="notificationBanner" class="notification-banner">
+            <div>
+                <strong>🎉 New raffle draw in 2 hours!</strong> You have 45 credits ready to enter.
+            </div>
+            <button class="close-btn" onclick="dismissBanner()">&times;</button>
+        </div>
+
+        <!-- Module 7: Credit-to-Token Conversion -->
+        <div id="conversion" class="card">
+            <div class="card-header">
+                💰 Credit-to-Token Conversion
+                <div class="tooltip">
+                    ℹ️
+                    <span class="tooltiptext">After 2 non-winning draws, 20% of your credits automatically convert to TalentTokens for future rewards and exclusive perks.</span>
+                </div>
+            </div>
+           
+            <div class="balance-display">
+                <div class="balance-item">
+                    <div class="balance-number" id="creditBalance">245</div>
+                    <div class="balance-label">Credits Available</div>
+                </div>
+                <div class="balance-item">
+                    <div class="balance-number" id="tokenBalance">89</div>
+                    <div class="balance-label">TalentTokens</div>
+                </div>
+            </div>
+
+            <div id="conversionStatus" class="conversion-status">
+                ⚡ Conversion available! You've had 2 non-winning draws. Convert 49 credits (20%) to TalentTokens?
+            </div>
+
+            <button class="btn btn-primary" onclick="showConversionModal()">Convert Credits to Tokens</button>
+            <button class="btn btn-secondary" onclick="checkBalance()">Refresh Balance</button>
+        </div>
+
+        <!-- Module 8: Notifications & Reminders -->
+        <div id="notifications" class="card">
+            <div class="card-header">
+                🔔 Notifications & Reminders
+            </div>
+           
+            <div class="notifications-section">
+                <h4 class="section-title">Recent Notifications</h4>
+                <div id="notificationsList">
+                    <div class="notification-item credit-notification">
+                        <strong>Credit Earned!</strong> You gained 5 credits for sharing a productivity tip.
+                        <small class="notification-time">2 hours ago</small>
+                    </div>
+                    <div class="notification-item raffle-notification">
+                        <strong>Raffle Reminder</strong> Don't forget to enter tonight's raffle draw!
+                        <small class="notification-time">5 hours ago</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h4 class="section-title">Notification Settings</h4>
+                <label class="setting-item">
+                    <input type="checkbox" id="pushNotifications" checked>
+                    Push Notifications
+                </label>
+                <label class="setting-item">
+                    <input type="checkbox" id="smsReminders" checked>
+                    SMS Reminders
+                </label>
+                <label class="setting-item">
+                    <input type="checkbox" id="whatsappUpdates">
+                    WhatsApp Updates
+                </label>
+            </div>
+
+            <button class="btn btn-primary" onclick="saveNotificationSettings()">Save Settings</button>
+            <button class="btn btn-secondary" onclick="testNotification()">Test Notification</button>
+        </div>
+    </div>
+
+    <!-- Conversion Modal -->
+    <div id="conversionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Confirm Credit Conversion</div>
+            <p>You're about to convert <strong>49 credits</strong> (20% of 245) into <strong>TalentTokens</strong>.</p>
+            <p class="modal-description">
+                TalentTokens provide exclusive benefits and can be used for premium features.
+            </p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="confirmConversion()">Convert Now</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* GigList.css */
+
+/* Overall container */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F1FAEE; /* Neutral Light */
+  padding: 20px;
+  color: #2A2D34; /* Neutral Dark */
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #1D3557; /* Primary Blue */
+  margin-bottom: 20px;
+}
+
+/* Gig card styles */
+.gig-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-out;
+}
+
+.gig-card:hover {
+  transform: scale(1.01);
+}
+
+.gig-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #1D3557;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.gig-desc {
+  font-family: 'Lora', serif;
+  margin-bottom: 8px;
+  color: #2A2D34;
+}
+
+.gig-bounty {
+  font-weight: bold;
+  color: #E76F51;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.accept-btn,
+.submit-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.accept-btn {
+  background-color: #E76F51; /* Accent Orange */
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #cf593e;
+}
+
+.submit-btn {
+  background-color: #1D3557; /* Primary Blue */
+  color: white;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #162947;
+}
+
+/* Inputs */
+input[type="file"],
+textarea {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
